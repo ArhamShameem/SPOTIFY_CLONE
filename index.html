@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="utility.css" />
   </head>
   <body>
-    <div class="container flex bg-black">
+    <div  class="container flex bg-black">
       <div class="left">
+        <div class="close">
+          <img width="30" class="invert" src="close.svg">
+        </div>
         <div class="home bg-grey rounded m-1 p-1">
           <div class="logo">
-            <img class="invert" src="logo.svg" alt="svg" />
+            <img width="150" class="invert" src="logo.svg" alt="svg" />
           </div>
           <ul>
             <li><img class="invert" src="home.svg" alt="home" />Home</li>
@@ -24,10 +27,7 @@
             <h2>Your Library</h2>
           </div>
           <div class="songsList">
-            <ul>
-
-
-            </ul>
+            <ul></ul>
           </div>
           <div class="footer">
             <div>
@@ -64,51 +64,56 @@
       <div class="right bg-grey rounded">
         <div class="header">
           <div class="nav">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="#ffffff"
-                stroke-width="1.5"
-              />
-              <path
-                d="M13.5 16C13.5 16 10.5 13.054 10.5 12C10.5 10.9459 13.5 8 13.5 8"
-                stroke="#ffffff"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+           <div class="hamburgerContainer">
 
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="#ffffff"
-                stroke-width="1.5"
-              />
-              <path
-                d="M10.5 8C10.5 8 13.5 10.946 13.5 12C13.5 13.0541 10.5 16 10.5 16"
-                stroke="#ffffff"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+             <img  class="invert hamburger" src="hamburger.svg">
+         
+           <svg
+             xmlns="http://www.w3.org/2000/svg"
+             width="24"
+             height="24"
+             viewBox="0 0 24 24"
+             fill="none"
+           >
+             <circle
+               cx="12"
+               cy="12"
+               r="10"
+               stroke="#ffffff"
+               stroke-width="1.5"
+             />
+             <path
+               d="M13.5 16C13.5 16 10.5 13.054 10.5 12C10.5 10.9459 13.5 8 13.5 8"
+               stroke="#ffffff"
+               stroke-width="1.5"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+             />
+           </svg>
+
+           <svg
+             xmlns="http://www.w3.org/2000/svg"
+             width="24"
+             height="24"
+             viewBox="0 0 24 24"
+             fill="none"
+           >
+             <circle
+               cx="12"
+               cy="12"
+               r="10"
+               stroke="#ffffff"
+               stroke-width="1.5"
+             />
+             <path
+               d="M10.5 8C10.5 8 13.5 10.946 13.5 12C13.5 13.0541 10.5 16 10.5 16"
+               stroke="#ffffff"
+               stroke-width="1.5"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+             />
+           </svg>
+           </div>
           </div>
           <div class="button">
             <button class="signupbtn">Sign up</button>
@@ -154,17 +159,17 @@
           </div>
           <div class="playbar">
             <div class="seekbar">
-              <div class="circle">
-                
+              <div class="circle"></div>
+            </div>
+            <div class="abovebar">
+              <div class="songinfo"></div>
+              <div class="songbuttons">
+                <img width="40" id="previous" src="prevsong.svg" />
+                <img width="40" id="play" src="play.svg" />
+                <img width="40" id="next" src="nextsong.svg" />
               </div>
+              <div class="songtime"></div>
             </div>
-            <div class="songinfo"></div>
-            <div class="songbuttons">
-              <img id="previous" src="prevsong.svg" />
-              <img id="play" src="play.svg" />
-              <img id="next" src="nextsong.svg" />
-            </div>
-            <div class="songtime"></div>
           </div>
         </div>
       </div>

@@ -16,6 +16,7 @@ body {
 }
 .right {
   width: 75vw;
+
 }
 
 .home ul li {
@@ -55,6 +56,12 @@ body {
 .footer a {
   color: grey;
 }
+.spotifyPlaylists h1{
+  padding: 16px;
+}
+.close{
+display: none;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -69,16 +76,18 @@ body {
 }
 .spotifyPlaylists {
   padding: 16px;
+  height: 90vh;
 }
 .spotifyPlaylists .card {
   width: 225px;
+  height: 373px;
   padding: 10px;
   border-radius: 5px;
   background-color: #252525;
 }
 .play {
   width: 28px;
-  height: 19px;
+  height: 28px;
   background-color: #1fdf64;
   border-radius: 50%;
   border: 2px solid #000;
@@ -103,8 +112,12 @@ body {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  overflow-y: scroll;
-  max-height: 50vh;
+  overflow-y: auto;
+  max-height: 75vh;
+}
+.cardContainer{
+  margin: 0;
+  justify-content: center;
 }
 .card > * {
   padding-top: 10px;
@@ -141,11 +154,10 @@ body {
   font-weight: bold;
   font-size: 17px;
 }
-.spotifyPlaylists {
 
-}
 .playbar {
   position: fixed;
+  font-size: 12px;
   bottom: 30px;
   background: #e2d9d9;
   filter: invert(1);
@@ -153,7 +165,7 @@ body {
   border-radius: 10px;
   padding: 12px;
   width: 70vw;
-  height: 40px;
+  min-height: 40px;
 }
 .songbuttons {
   display: flex;
@@ -193,7 +205,7 @@ body {
   padding: 1px;
 }
 .seekbar {
-  height: 2px;
+  height: 4px;
   width: 98%;
   background:  black;
   border-radius: 10px;
@@ -210,7 +222,66 @@ body {
   bottom: 6px;
   left: 0%;
   transition: left 0.5s;
+  cursor: pointer;
 }
 .songbuttons img{
   cursor: pointer;
+}
+.hamburger{
+  display: none;
+}
+.hamburgerContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+.songinfo{
+ color: black;
+ cursor: pointer;
+
+}
+.songTime{
+  color: black;
+  cursor: pointer;
+}
+.abovebar{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+@media (max-width:1400px){
+  .left{
+    position: absolute;
+    left: -120%;
+    transition: all .3s;
+    z-index: 1;
+    width: 373px;
+    height: 100vh;
+
+    background-color: black ;
+
+  }
+  .left .close {
+    position:absolute;
+    right: 31px;
+    top: 25px;
+    width: 29px;
+  }
+  .right{
+    width: 100vw;
+
+  }
+  .playbar{
+    width: 80%;
+  }
+  .seekbar{
+    width: calc(100% - 25px); /* Adjusted width to consider margin */
+  }
+  .hamburger{
+    display: block;
+  }
+  .close{
+    display: block;
+  }
 }
